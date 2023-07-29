@@ -1,0 +1,22 @@
+<%= form_with(model: discord_channel) do |form| %>
+  <% if discord_channel.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(discord_channel.errors.count, "error") %> prohibited this discord_channel from being saved:</h2>
+
+      <ul>
+        <% discord_channel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :channel_id, style: "display: block" %>
+    <%= form.text_field :channel_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

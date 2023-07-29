@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Discord channels</h1>
+
+<div id="discord_channels">
+  <% @discord_channels.each do |discord_channel| %>
+    <%= render discord_channel %>
+    <p>
+      <%= link_to "Show this discord channel", discord_channel %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New discord channel", new_discord_channel_path %>

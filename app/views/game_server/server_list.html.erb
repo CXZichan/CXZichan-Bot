@@ -1,0 +1,12 @@
+  <h1>Serverliste</h1>
+  <ul>
+    <% server_list.each do |server| %>
+      <li>
+        <strong>Server Name:</strong> <%= server['name'] %><br>
+        <strong>Server ID:</strong> <%= server['id'] %><br>
+        <strong>Status:</strong> <%= server['status'] %><br>
+        <strong>IP:</strong> <%= server['ip'] %><br>
+        <strong>Port:</strong> <%= server['port'] %><br>
+      </li>
+    <% end %>
+  </ul>

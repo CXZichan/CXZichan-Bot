@@ -15,7 +15,13 @@ module Server
         formatted_list += "----------------------------------\n\n"
       end
       # Senden der formatierten Liste in den Discord-Chat
-      event.respond(formatted_list)
+
+      sent_message = event.respond(formatted_list)
+
+      # Löschen der gesendeten Nachricht nach 10 Sekunden
+      sleep(10)
+      event.message.delete
+
     else
       event.respond('Fehler beim Abrufen der Serverliste.')
     end

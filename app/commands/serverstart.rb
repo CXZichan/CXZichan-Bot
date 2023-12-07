@@ -6,7 +6,13 @@ module Serverstart
 
     if servers.include?(server_id)
       serverstart(server_id)
-      event.respond('Server startet! Viel Spaß ^^')
+
+      sent_message = event.respond('Server startet! Viel Spaß ^^')
+
+      # Löschen der gesendeten Nachricht nach 10 Sekunden
+      sleep(10)
+      sent_message.delete
+      event.message.delete
     else
       event.respond('Fehler beim starten des Servers, bitte überprüfe die ID')
     end

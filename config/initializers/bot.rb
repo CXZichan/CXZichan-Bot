@@ -36,7 +36,6 @@ def get_server_list
   response = http.request(request)
   if response.code == '200'
     JSON.parse(response.body)
-    # Verarbeite die Spieleliste hier weiter
   else
     puts "Fehler: #{response.code} - #{response.message}"
   end
@@ -56,7 +55,6 @@ def serverstart(server_id)
   response = http.request(request)
   if response.code == '200'
     JSON.parse(response.body)
-  # Verarbeite die Spieleliste hier weiter
   else
     puts "Fehler: #{response.code} - #{response.message}"
   end

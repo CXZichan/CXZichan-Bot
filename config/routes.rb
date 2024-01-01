@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  root "discord_channels#index"
+  root 'discord_channels#index'
 
   resources :discord_channels
   resources :roles

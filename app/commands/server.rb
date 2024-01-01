@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Server
   Bot.command :serverlist do |event|
     server_list = get_server_list
@@ -5,7 +7,6 @@ module Server
       # Formatieren der Serverliste
       formatted_list = "Serverliste:\n"
       server_list.each do |server|
-
         formatted_list += "Name: #{server['name']}\n"
         formatted_list += "ID: #{server['id']}\n"
         formatted_list += "Game: #{server['game']}\n"
@@ -16,7 +17,7 @@ module Server
       end
       # Senden der formatierten Liste in den Discord-Chat
 
-      sent_message = event.respond(formatted_list)
+      event.respond(formatted_list)
 
       # Löschen der gesendeten Nachricht nach 10 Sekunden
       sleep(10)

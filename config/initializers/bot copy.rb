@@ -1,7 +1,7 @@
+# frozen_string_literal: true
 # require 'discordrb'
 # require 'dotenv'
 # Dotenv.load
-
 
 # COMMANDS_CHANNEL = 1134843806504730626
 # AUTH_CHANNEL = 1134857105325699192

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'erb'
 require_relative 'dathost_api'
 
@@ -13,14 +15,14 @@ if server_list
   template = ERB.new(template_file)
 
   # ERB-Rendering in einer HTML-Datei
-  output_html = template.result_with_hash(server_list: server_list)
+  output_html = template.result_with_hash(server_list:)
 
   # Speichern des HTML-Outputs in einer Datei
   File.open('server_list.html', 'w') do |file|
     file.puts output_html
   end
 
-  puts "Serverliste wurde in server_list.html gespeichert."
+  puts 'Serverliste wurde in server_list.html gespeichert.'
 else
-  puts "Fehler beim Abrufen der Serverliste."
+  puts 'Fehler beim Abrufen der Serverliste.'
 end

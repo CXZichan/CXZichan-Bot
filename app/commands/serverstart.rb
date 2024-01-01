@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Serverstart
   Bot.command :serverstart do |event|
     server_list = get_server_list
